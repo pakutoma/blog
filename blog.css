@@ -1,0 +1,163 @@
+﻿body
+{
+	background-color:#EEE;
+	font-family: '源ノ角ゴシック Regular','源ノ角ゴシック','ヒラギノ角ゴ Pro W3','メイリオ';
+	word-wrap: break-word;
+}
+a
+{
+	color : #383B35;
+	text-decoration: none;
+}
+ul
+{
+	list-style-type: none;
+	color: #222;
+	margin: 0 0.5em 0 0.5em;
+	padding:0;
+}
+li:before
+{
+	content: "・ ";
+	color: #AAA;
+}
+#blogtitle
+{
+	line-height : 1.5 ;
+	font-size : 70px;
+	color :#FFF;
+	padding: 10px 10px 10px 10px;
+	background-color: #F55;
+	border-radius: 10px;
+	width: 50%;
+	margin: 0 auto;
+	padding-top:1%;
+	padding-bottom:1%;
+	margin-top:2%;
+	margin-bottom:2%;
+	text-align:center;
+	white-space:nowrap;
+}
+.links
+{
+	line-height : 1.5 ;
+	font-size : 14px;
+	color :#383B35;
+	min-height: 100px;
+	padding-bottom:2%;
+}
+.moveLink
+{
+    margin:2%;
+}
+.linktitle
+{
+    padding:0.3em 2em 0.3em 2em;
+	border-top-width: 2px;
+	border-top-color: #CCC;
+	/*border-top-style: dashed;*/
+    border-bottom-style: dashed;
+	border-bottom-width: 2px;
+	border-bottom-color: #CCC;
+}
+#other
+{
+	display: table-cell;
+	box-sizing: border-box;
+	vertical-align: top;
+	margin: 0 auto;
+	width: 20%;
+	font-size: 16px;
+	border-left-color:#ccc;
+	/*border-left-style:dashed;*/
+	border-left-width:2px;
+}
+.text
+{
+	line-height : 1.5 ;
+	font-size : 18px;
+	color :#383B35;
+	text-align:left;
+	margin: 0 auto;
+	padding-bottom: 1%; 
+    min-height: 30%;
+}
+.title
+{
+    line-height : 1.5 ;
+	font-size : 35px;
+	color :#383B35;
+	text-align:left;
+	margin: 0 auto;
+    padding-bottom:1%;
+    padding-top:2%;
+}
+.main
+{
+	padding-top:1em !important;
+	padding-left:3em !important;
+	padding-right:4% !important;
+}
+#enclose
+{
+	display: table;
+	background-color:#FFFFFF;
+	width: 60%;
+	font-size: 0; /*inline-block対策*/
+	margin: 0 auto;
+}
+#texts
+{
+	display: table-cell;
+	vertical-align: top;
+	font-size: 16px;
+	width:80%;
+}
+.date
+{
+    text-align:left;
+    line-height : 1.5 ;
+	font-size : 16px;
+	color :#383B35;
+	margin: 0 auto;
+    padding-bottom:1%;
+}
+.whiteBox
+{
+	padding: 10px 10px 10px 10px;
+	margin: 0 auto;
+} 
+#footer
+{
+	text-align:center;
+	clear:both;
+	margin-top:1%;
+	margin-bottom:1%;
+}
+#paging
+{
+    padding:0.3em 2em 0.3em 2em;
+    border-bottom-style: dashed;
+	border-bottom-width: 2px;
+	border-bottom-color: #CCC;
+}
+
+
+@media screen and (max-width: 1100px)
+{
+	#enclose
+    {
+		width: 90%;
+	}
+    #blogtitle
+    {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 900px)
+{
+	#enclose
+    {
+		width:100%;
+	}
+}
