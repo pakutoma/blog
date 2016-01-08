@@ -15,14 +15,12 @@ $smarty->compile_dir = '/srv/smarty/templates_c';
 $smarty->config_dir = '/srv/smarty/configs';
 $smarty->cache_dir = '/srv/smarty/cache';
 
-if (isset($_GET['page']))
-{
+if (isset($_GET['page'])) {
 	$postid = $_GET['page'];
 	$blog = new ActiveRecord();
 	$blog -> connectPdo('blogdb','blog','readonly','readonly');
 	$data = $blog -> find($postid);
-	if (!isset($data->pagenum))
-	{
+	if (!isset($data->pagenum)) {
 		echo "(データが)ないです。";
 		return;
 	}
@@ -41,22 +39,18 @@ if (isset($_GET['page']))
 	if ($postid - 1 > 0) {
 		$smarty -> assign('prev',$blog -> find($postid - 1));
 	}
-}
-else if (isset($_GET['category']))
-{
+} else if (isset($_GET['category'])) {
 	$category = $_GET['category'];
 	$categoryview = new CategoryView();
 	$data = $categoryview -> getPages($category);
-	if (!isset($data[0]->pagenum))
-	{
+	if (!isset($data[0]->pagenum)) {
 		echo "(データが)ないです。";
 		return;
 	}
 	$latest = new LatestPages();
 	$category = new Category();
 	$archive = new Archive();
-	foreach (array_reverse($data) as $page)
-	{
+	foreach (array_reverse($data) as $page) {
 		$main[] = array(
 			'title' => $page -> title,
 			'date' => $page -> date,
@@ -64,22 +58,18 @@ else if (isset($_GET['category']))
 		);
 	}
 	$smarty -> assign('title','カテゴリ:'.$_GET['category']);
-}
-else if (isset($_GET['archive']))
-{
+} else if (isset($_GET['archive'])) {
 	$archive = $_GET['archive'];
 	$archiveview = new ArchiveView();
 	$data = $archiveview -> getPages($archive);
-	if (!isset($data[0]->pagenum))
-	{
+	if (!isset($data[0]->pagenum)) {
 		echo "(データが)ないです。";
 		return;
 	}
 	$latest = new LatestPages();
 	$category = new Category();
 	$archive = new Archive();
-	foreach (array_reverse($data) as $page)
-	{
+	foreach (array_reverse($data) as $page) {
 		$main[] = array(
 			'title' => $page -> title,
 			'date' => $page -> date,
@@ -87,14 +77,11 @@ else if (isset($_GET['archive']))
 		);
 	}
 	$smarty->assign('title','アーカイブ:'.$_GET['archive']);
-}
-else
-{
+} else {
 	$blog = new ActiveRecord();
 	$blog -> connectPdo('blogdb','blog','readonly','readonly');
 	$data = $blog -> find($blog -> size());
-	if (!isset($data->pagenum))
-	{
+	if (!isset($data->pagenum)) {
 		echo "(データが)ないです。";
 		return;
 	}
@@ -114,5 +101,3 @@ $smarty->assign('latest',$latest -> getPages());
 $smarty->assign('category',$category -> getCategory());
 $smarty -> assign('archive',$archive -> getArchive());
 $smarty->display('blog.tpl');
-
-?>

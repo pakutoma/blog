@@ -17,8 +17,7 @@
 	$category = new ActiveRecord();
 	$category -> connectPdo('blogdb','categorytable','readonly','readonly');
 	$categories = $category -> find($num - 2) -> category;
-	for ($i=0; $i < 10; $i++)
-	{
+	for ($i=0; $i < 10; $i++) {
 		$categorystr = $category -> find($num - (9 - $i)) -> category;
 		$datetime = new DateTime($pages[9-$i]->date);
 		$items[$i] = array(
@@ -31,4 +30,3 @@
 	}
 	$smarty->assign('items',$items);
 	$smarty->display('rss.tpl');
-?>

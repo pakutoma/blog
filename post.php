@@ -35,5 +35,3 @@ foreach ($categories as $category) {
 }
 
 echo "{$postid}番目の記事を投稿しました";
-
-?>
