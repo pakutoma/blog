@@ -54,8 +54,8 @@ if (isset($_GET['page'])) {
         $main[] = array(
             'title' => $page -> title,
             'date' => $page -> date,
-            'text' => $page -> text,
-            'num' => $page -> pagenum
+            'text' => mb_substr($page -> text,0,mb_strpos($page -> text,"<br />")),
+            'pagenum' => $page -> pagenum
         );
     }
     $smarty -> assign('title','カテゴリ:'.$_GET['category']);
@@ -74,7 +74,8 @@ if (isset($_GET['page'])) {
         $main[] = array(
             'title' => $page -> title,
             'date' => $page -> date,
-            'text' => $page -> text,
+            'text' => mb_substr($page -> text,0,mb_strpos($page -> text,"<br />")),
+            'pagenum' => $page -> pagenum
         );
     }
     $smarty->assign('title','アーカイブ:'.$_GET['archive']);
