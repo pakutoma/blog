@@ -55,6 +55,7 @@ if (isset($_GET['page'])) {
             'title' => $page -> title,
             'date' => $page -> date,
             'text' => $page -> text,
+            'num' => $page -> pagenum
         );
     }
     $smarty -> assign('title','カテゴリ:'.$_GET['category']);

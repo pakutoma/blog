@@ -38,11 +38,14 @@
                 </div>
             {/if}
             <div id="main" class="main whiteBox">
-                {section name=maintext loop=$main}
-                    <h2 id="title" class="title">{$main[maintext].title}</h2>
-                    <p id="date" class="date">{$main[maintext].date}</p>
-                    <p id="text" class="text">{$main[maintext].text}</p>
-                {/section}
+                {foreach from=$main item=item}
+                    <h2 id="title" class="title">{$item.title}</h2>
+                    <p id="date" class="date">{$item.date}</p>
+                    <p id="text" class="text">{$item.text}</p>
+                    {if isset($item.pagenum)}
+                        <a href="/?page={$item.pagenum}" class="readMore">続きを読む</a>
+                    {/if}
+                {/foreach}
             </div>
         </div>
         <div id="other">
