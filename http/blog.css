@@ -21,6 +21,19 @@ li:before
 	content: "・ ";
 	color: #AAA;
 }
+details
+{
+    color: #AAA;
+    margin: 0 0 0 0.8em;
+}
+details span
+{
+    color: #222;
+}
+details ul
+{
+    color: #222;
+}
 #blogtitle
 {
 	line-height : 1.5 ;
