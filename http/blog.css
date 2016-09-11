@@ -66,11 +66,8 @@ details ul
 .linktitle
 {
     padding:0.3em 2em 0.3em 2em;
-	border-top-width: 2px;
-	border-top-color: #CCC;
-	/*border-top-style: dashed;*/
-    border-bottom-style: dashed;
-	border-bottom-width: 2px;
+    border-bottom-style: solid;
+	border-bottom-width: 1px;
 	border-bottom-color: #CCC;
 }
 #other
@@ -81,9 +78,6 @@ details ul
 	margin: 0 auto;
 	width: 20%;
 	font-size: 16px;
-	border-left-color:#ccc;
-	/*border-left-style:dashed;*/
-	border-left-width:2px;
 }
 .text
 {
@@ -149,9 +143,11 @@ details ul
 }
 #paging
 {
-    padding:0.3em 2em 0.3em 2em;
-    border-bottom-style: dashed;
-	border-bottom-width: 2px;
+    margin: 0.3em 1em 0.3em 1em;
+    padding: 0 1em 0 1em;
+    display: inline-block;
+    border-bottom-style: solid;
+	border-bottom-width: 1px;
 	border-bottom-color: #CCC;
 }
 
