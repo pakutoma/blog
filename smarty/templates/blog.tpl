@@ -21,7 +21,7 @@
     {/literal}
 </head>
 <body>
-    <div id="blogtitle">ぱくとまのブログ</div>
+    <div id="blogtitle"><a href="/">ぱくとまのブログ</a></div>
     <div id="enclose">
         <div id="texts">
             {if isset($next)||isset($prev)}
@@ -30,7 +30,7 @@
                         <a href="/?page={$prev -> pagenum}">&lt; {$prev -> title}</a>
                     {/if}
                     {if isset($next)&&isset($prev)}
-                         | 
+                         |
                     {/if}
                     {if isset($next)}
                         <a href="/?page={$next -> pagenum}">{$next -> title} &gt;</a>
