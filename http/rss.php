@@ -1,5 +1,5 @@
 <?php
-    define('SMARTY_DIR', '/usr/local/lib/Smarty-3.1.21/libs/');
+    define('SMARTY_DIR', '/usr/share/php/smarty3/');
     require_once('activerecord.php');
     require_once(SMARTY_DIR . 'Smarty.class.php');
 
